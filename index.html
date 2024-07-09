@@ -1,326 +1,901 @@
 <!DOCTYPE html>
- <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parking Split</title>
 
     <!-- Meta SEO -->
-    <meta name="title" content="Parking-Split">
-    <meta name="description" content="Discover convenient and affordable parking solutions in the city center and beyond. Our prime locations offer 24/7 access, enhanced security, and multiple payment options, including 24/7 Self-Service Payment Kiosk. Whether you need hourly parking in the heart of the city or all-day parking just outside the center, we have the perfect spot for you. Enjoy peace of mind with our professionally managed facilities and competitive rates. Visit us today for the best parking experience in town.">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="title" content="Parking-Split" />
+    <meta
+      name="description"
+      content="Discover convenient and affordable parking solutions in the city center and beyond. Our prime locations offer 24/7 access, enhanced security, and multiple payment options, including 24/7 Self-Service Payment Kiosk. Whether you need hourly parking in the heart of the city or all-day parking just outside the center, we have the perfect spot for you. Enjoy peace of mind with our professionally managed facilities and competitive rates. Visit us today for the best parking experience in town."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <link href="./output.css" rel="stylesheet">
-</head>
-<body>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
     <header class="fixed w-full">
-        <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
-            <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-                <a href="#" class="flex items-center">
-                    <img src="./images/logo.svg" class="h-6 mr-3 sm:h-9" alt=" Logo" />
-                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Parking-Split</span>
-                </a>
-                <div class="flex items-center lg:order-2">
-                    <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                </div>
-                <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                        <li>
-                            <a href="#index" class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white" aria-current="page">Home</a>
-                        </li>
-                        <li>
-                            <a href="#oldCityParking" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Old City Parking</a>
-                        </li>
-                        <li>
-                            <a href="#parkingFirule" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Parking Firule</a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
+        <div
+          class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto"
+        >
+          <a href="#" class="flex items-center">
+            <img src="./images/logo.svg" class="h-6 mr-3 sm:h-9" alt=" Logo" />
+            <span
+              class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+              >Parking-Split</span
+            >
+          </a>
+          <div class="flex items-center lg:order-2">
+            <button
+              data-collapse-toggle="mobile-menu-2"
+              type="button"
+              class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="mobile-menu-2"
+              aria-expanded="false"
+              id="menu-toggle"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                id="menu-icon"
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <svg
+                id="close-icon"
+                class="hidden w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
+            id="mobile-menu-2"
+          >
+            <ul
+              class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 items-center"
+            >
+              <li>
+                <a
+                  href="#"
+                  id="home-link"
+                  class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#oldCityParking"
+                  id="oldCityParking-link"
+                  class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  >Old City Parking</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#parkingFirule"
+                  id="parkingFirule-link"
+                  class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  >Parking Firule</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  id="contact-link"
+                  class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  >Contact Us</a
+                >
+              </li>
+              <div class="flex gap-8">
+                <a href="index.html"
+                  ><img
+                    src="https://static.parastorage.com/services/linguist-flags/1.663.0/assets/flags/square/GBR.png"
+                    alt="English"
+                    class="w-10 h-5 object-cover"
+                /></a>
+
+                <a href="hr.html"
+                  ><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/1024px-Flag_of_Croatia.svg.png"
+                    alt="Croatian"
+                    class="w-10 h-5 object-cover"
+                /></a>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- Start block -->
     <section class="bg-white dark:bg-gray-900">
-        <div class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28">
-            <div class="mr-auto place-self-center lg:col-span-5">
-                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">Explore Our Premier Parking Solutions</h1>
-                <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-                    Discover the convenience of parking in the city center with our strategically located facility. Offering affordable rates starting at just 2 EUR per hour, our central location ensures easy access to nearby attractions and businesses without any hassle.
-                </p>
-                <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-                    For those in need of extended parking options, our second location, slightly outside the city center, is the ideal choice. Perfect for daily parking, it offers competitive rates of only 1 EUR per hour and an attractive full-day rate of 18 EUR.
-
-                </p>
-                <p class="text-gray-500 dark:text-gray-400 mb-4">Click on the buttons below to view each location on Google Maps:</p>
-                <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-                    <a href="https://maps.app.goo.gl/poSuA2USXeJ9EYsM9" target="_blank"  class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                        <svg class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5z"></path></svg> Old City Parking
-                    </a>
-                    <a href="https://maps.app.goo.gl/vYcLAegDZ4ZJyApb6" target="_blank"  class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-                        <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5z"></path></svg> Parking Firule
-                    </a>
-                </div>
-
-            </div>
-            <div class="lg:mt-0 lg:col-span-7 lg:flex">
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1O0yfLrllJXQINO0aEjiiVcMd8-S2854&ehbc=2E312F&noprof=1" width="100%" height="480"></iframe>
-            </div>                
+      <div
+        class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto gap-8 lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28"
+      >
+        <div class="mr-auto place-self-center lg:col-span-5">
+          <h1
+            class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white"
+          >
+            Explore Our Premier Parking Solutions
+          </h1>
+          <p
+            class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+          >
+            Discover the convenience of parking in the city center with our
+            strategically located facility. Offering affordable rates starting
+            at just 2 EUR per hour, our central location ensures easy access to
+            nearby attractions and businesses without any hassle.
+          </p>
+          <p
+            class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+          >
+            For those in need of extended parking options, our second location,
+            slightly outside the city center, is the ideal choice. Perfect for
+            daily parking, it offers competitive rates of only 1 EUR per hour
+            and an attractive full-day rate of 18 EUR.
+          </p>
+          <p class="text-gray-500 dark:text-gray-400 mb-4">
+            Click on the buttons below to view each location on Google Maps:
+          </p>
+          <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+            <a
+              href="https://maps.app.goo.gl/poSuA2USXeJ9EYsM9"
+              target="_blank"
+              class="inline-flex items-center justify-center w-full px-5 py-3 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              <svg
+                class="w-4 h-4 mr-2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5z"
+                ></path>
+              </svg>
+              Old City Parking
+            </a>
+            <a
+              href="https://maps.app.goo.gl/vYcLAegDZ4ZJyApb6"
+              target="_blank"
+              class="inline-flex items-center justify-center w-full px-5 py-3 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              <svg
+                class="w-4 h-4 mr-2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5z"
+                ></path>
+              </svg>
+              Parking Firule
+            </a>
+          </div>
         </div>
+        <div class="lg:mt-0 lg:col-span-7 lg:flex">
+          <iframe
+            src="https://www.google.com/maps/d/u/0/embed?mid=1O0yfLrllJXQINO0aEjiiVcMd8-S2854&ehbc=2E312F&noprof=1"
+            width="100%"
+            height="480"
+          ></iframe>
+        </div>
+      </div>
     </section>
     <!-- End block -->
     <!-- Start block -->
-    <section class="bg-gray-50 dark:bg-gray-800" id="oldCityParking">
-        <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
-            <!-- Row -->
-            <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-                <div class="text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Old City Parking</h2>
-                    <p class="mb-8 font-light lg:text-xl">
-                        Old City Parking offers prime parking in the heart of the city, ideal for short visits or day-long stays. With rates starting at just 2 EUR per hour, it's an affordable option for accessing nearby shops, offices, and cultural sites. Amenities at this centrally located facility include 24/7 security, CCTV surveillance for added safety, and electronic payment options for convenience. Handicap accessible spots are available, ensuring inclusivity for all visitors. Whether you're shopping, on business, or exploring the city, Old City Parking provides a secure and convenient spot to start your journey.
-                    </p>
-                    <!-- List -->
-                    <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700">
-                        <li class="flex space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">24/7 Operation: Always open for your convenience.</span>
-                        </li>
-                        <li class="flex space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">On-site Personnel: Professionally trained staff available to assist with parking and queries.</span>
-                        </li>
-                        <li class="flex space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Enhanced Security Continuous CCTV surveillance for your safety</span>
-                        </li>
-                        <li class="flex space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Convenient Payment Methods: 24/7 self-service payment kiosk</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.8178366170664!2d16.442648376548874!3d43.50613556192965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13355ff9ee65f179%3A0xca7bb2af92fbba05!2sOld%20City%20Parking%2C%20Split!5e0!3m2!1shr!2shr!4v1720420788631!5m2!1shr!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-            <!-- Row -->
-            <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16" id="parkingFirule" >
-                <div class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.960035077154!2d16.459078176548736!3d43.50316926212096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13355e1fc949fb5f%3A0x8469b4d49ec00d38!2sPut%20Iza%20Nove%20Bolnice%2010%2C%2021000%2C%20Split!5e0!3m2!1shr!2shr!4v1720421827316!5m2!1shr!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Parking Firule</h2>
-                    <p class="mb-8 font-light lg:text-xl">
-                        Parking Firule offers the perfect solution for daily or extended stays. Located slightly outside the city center, it provides a quieter, more spacious parking environment at competitive rates. Enjoy the convenience of secure, accessible parking for just 1 EUR per hour or 18 EUR for a full day. It’s ideal for both short visits and longer-term parking needs.
-                    </p>
-                    <!-- List -->
-                    <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700">
-                        <li class="flex space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Daily Rates: Affordable hourly and full-day pricing</span>
-                        </li>
-                        <li class="flex space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Spacious Layout: Ample space, avoiding the congested city center</span>
-                        </li>
-                        <li class="flex space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Security Monitoring: 24/7 surveillance to ensure vehicle safety</span>
-                        </li>
-                        <li class="flex space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Flexible Payments: 24/7 Self-Service Payment Kiosk</span>
-                        </li>
-                        <li class="flex space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Accessible Location: Easy access from major routes without city traffic</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <section class="bg-gray-50 dark:bg-gray-800">
+      <div
+        class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6"
+        id="oldCityParking"
+      >
+        <!-- Row -->
+        <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
+          <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2
+              class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+            >
+              Old City Parking
+            </h2>
+            <p class="mb-8 font-light lg:text-xl">
+              Old City Parking offers prime parking in the heart of the city,
+              ideal for short visits or day-long stays. With rates starting at
+              just 2 EUR per hour, it's an affordable option for accessing
+              nearby shops, offices, and cultural sites. Amenities at this
+              centrally located facility include 24/7 security, CCTV
+              surveillance for added safety, and electronic payment options for
+              convenience. Handicap accessible spots are available, ensuring
+              inclusivity for all visitors. Whether you're shopping, on
+              business, or exploring the city, Old City Parking provides a
+              secure and convenient spot to start your journey.
+            </p>
+            <!-- List -->
+            <ul
+              role="list"
+              class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700"
+            >
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span
+                  class="text-base font-medium leading-tight text-gray-900 dark:text-white"
+                  >24/7 Operation: Always open for your convenience.</span
+                >
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span
+                  class="text-base font-medium leading-tight text-gray-900 dark:text-white"
+                  >On-site Personnel: Professionally trained staff available to
+                  assist with parking and queries.</span
+                >
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span
+                  class="text-base font-medium leading-tight text-gray-900 dark:text-white"
+                  >Enhanced Security Continuous CCTV surveillance for your
+                  safety</span
+                >
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span
+                  class="text-base font-medium leading-tight text-gray-900 dark:text-white"
+                  >Convenient Payment Methods: 24/7 self-service payment
+                  kiosk</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.8178366170664!2d16.442648376548874!3d43.50613556192965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13355ff9ee65f179%3A0xca7bb2af92fbba05!2sOld%20City%20Parking%2C%20Split!5e0!3m2!1shr!2shr!4v1720420788631!5m2!1shr!2shr"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
-      </section>
+        <!-- Row -->
+        <br id="parkingFirule" />
+        <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
+          <div class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.960035077154!2d16.459078176548736!3d43.50316926212096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13355e1fc949fb5f%3A0x8469b4d49ec00d38!2sPut%20Iza%20Nove%20Bolnice%2010%2C%2021000%2C%20Split!5e0!3m2!1shr!2shr!4v1720421827316!5m2!1shr!2shr"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2
+              class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+            >
+              Parking Firule
+            </h2>
+            <p class="mb-8 font-light lg:text-xl">
+              Parking Firule offers the perfect solution for daily or extended
+              stays. Located slightly outside the city center, it provides a
+              quieter, more spacious parking environment at competitive rates.
+              Enjoy the convenience of secure, accessible parking for just 1 EUR
+              per hour or 18 EUR for a full day. It’s ideal for both short
+              visits and longer-term parking needs.
+            </p>
+            <!-- List -->
+            <ul
+              role="list"
+              class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700"
+            >
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span
+                  class="text-base font-medium leading-tight text-gray-900 dark:text-white"
+                  >Daily Rates: Affordable hourly and full-day pricing</span
+                >
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span
+                  class="text-base font-medium leading-tight text-gray-900 dark:text-white"
+                  >Spacious Layout: Ample space, avoiding the congested city
+                  center</span
+                >
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span
+                  class="text-base font-medium leading-tight text-gray-900 dark:text-white"
+                  >Security Monitoring: 24/7 surveillance to ensure vehicle
+                  safety</span
+                >
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span
+                  class="text-base font-medium leading-tight text-gray-900 dark:text-white"
+                  >Flexible Payments: 24/7 Self-Service Payment Kiosk</span
+                >
+              </li>
+              <li class="flex space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span
+                  class="text-base font-medium leading-tight text-gray-900 dark:text-white"
+                  >Accessible Location: Easy access from major routes without
+                  city traffic</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- End block -->
     <!-- Start block -->
     <section class="bg-white dark:bg-gray-900">
-        <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
-            <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
-                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Flexible pricing options</h2>
-                <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
-                    Our facilities include on-site 24/7 self-service payment kiosk for quick and secure transactions, ensuring a hassle-free parking experience. We tailor our pricing to fit your needs, providing both short-term and long-term parking solutions.
-                </p>
-            </div>
-            <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
-                <!-- Pricing Card -->
-                <div class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-                    <h3 class="mb-4 text-2xl font-semibold">Old City Parking</h3>
-                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                        Perfect for daily commutes and ventures in the city center.
-                    </p>
-                    <div class="flex items-baseline justify-center my-8">
-                        <span class="mr-2 text-5xl font-extrabold">2€</span>
-                        <span class="text-gray-500 dark:text-gray-400">/hour</span>
-                    </div>
-                    <!-- List -->
-                    <ul role="list" class="mb-8 space-y-4 text-left">
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>24/7 Self-Service Payment Kiosk</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Close to the city center</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>24/7 surveillance to ensure safety</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Staff available on-site</span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-purple-900">Contact us</a>
-                </div>
-                <!-- Pricing Card -->
-                <div class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-                    <h3 class="mb-4 text-2xl font-semibold">Parking Firule</h3>
-                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                        Ideal for longer stays and visits just outside the city center.
-                    </p>
-                    <div class="flex items-baseline justify-center my-8">
-                        <span class="mr-2 text-5xl font-extrabold">1€</span>
-                        <span class="text-gray-500 dark:text-gray-400">/hour</span>
-                    </div>
-                    <!-- List -->
-                    <ul role="list" class="mb-8 space-y-4 text-left">
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Special daily rate of 18€</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>24/7 Self-Service Payment Kiosk</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Situated near key transit routes</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Extended parking options</span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-purple-900">Contact us</a>
-                </div>
-                <!-- Pricing Card -->
-                <div class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-                    <h3 class="mb-4 text-2xl font-semibold">Custom</h3>
-                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Custom rate plans ideal for frequent visitors or extended stays.</p>
-                    <div class="flex items-baseline justify-center my-8">
-                        <span class="mr-2 text-5xl font-extrabold">Contact us</span>
-                    </div>
-                    <!-- List -->
-                    <ul role="list" class="mb-8 space-y-4 text-left">
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Individual plans</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Special rates for bulk bookings.</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Long-term discounts</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Priority parking options</span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-purple-900">Contact us</a>
-                </div>
-            </div>
+      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
+        <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
+          <h2
+            class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+          >
+            Flexible pricing options
+          </h2>
+          <p
+            class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400"
+          >
+            Our facilities include on-site 24/7 self-service payment kiosk for
+            quick and secure transactions, ensuring a hassle-free parking
+            experience. We tailor our pricing to fit your needs, providing both
+            short-term and long-term parking solutions.
+          </p>
         </div>
-      </section>
+        <div
+          class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0"
+        >
+          <!-- Pricing Card -->
+          <div
+            class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+          >
+            <h3 class="mb-4 text-2xl font-semibold">Old City Parking</h3>
+            <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+              Perfect for daily commutes and ventures in the city center.
+            </p>
+            <div class="flex items-baseline justify-center my-8">
+              <span class="mr-2 text-5xl font-extrabold">2€</span>
+              <span class="text-gray-500 dark:text-gray-400">/hour</span>
+            </div>
+            <!-- List -->
+            <ul role="list" class="mb-8 space-y-4 text-left">
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>24/7 Self-Service Payment Kiosk</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Close to the city center</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>24/7 surveillance to ensure safety</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Staff available on-site</span>
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-purple-900"
+              >Contact us</a
+            >
+          </div>
+          <!-- Pricing Card -->
+          <div
+            class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+          >
+            <h3 class="mb-4 text-2xl font-semibold">Parking Firule</h3>
+            <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+              Ideal for longer stays and visits just outside the city center.
+            </p>
+            <div class="flex items-baseline justify-center my-8">
+              <span class="mr-2 text-5xl font-extrabold">1€</span>
+              <span class="text-gray-500 dark:text-gray-400">/hour</span>
+            </div>
+            <!-- List -->
+            <ul role="list" class="mb-8 space-y-4 text-left">
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Special daily rate of 18€</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>24/7 Self-Service Payment Kiosk</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Situated near key transit routes</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Extended parking options</span>
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-purple-900"
+              >Contact us</a
+            >
+          </div>
+          <!-- Pricing Card -->
+          <div
+            class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+          >
+            <h3 class="mb-4 text-2xl font-semibold">Custom</h3>
+            <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+              Custom rate plans ideal for frequent visitors or extended stays.
+            </p>
+            <div class="flex items-baseline justify-center my-8">
+              <span class="mr-2 text-5xl font-extrabold">Contact us</span>
+            </div>
+            <!-- List -->
+            <ul role="list" class="mb-8 space-y-4 text-left">
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Individual plans</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Special rates for bulk bookings.</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Long-term discounts</span>
+              </li>
+              <li class="flex items-center space-x-3">
+                <!-- Icon -->
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span>Priority parking options</span>
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-purple-900"
+              >Contact us</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- End block -->
     <!-- Start block -->
     <section id="contact" class="bg-white dark:bg-gray-900">
-        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
-            <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Have a question about parking availability? Need information about our rates or locations? Interested in our monthly parking plans? Get in touch with us.</p>
-            <form action="#" class="space-y-8">
-                <div>
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-                    <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="your@email.com" required>
-                </div>
-                <div>
-                    <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-                    <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required>
-                </div>
-                <div>
-                    <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Parking location</label>
-                    <select type="text" id="parkingLocation" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" required>
-                        <option value="Old City Parking">Old City Parking</option>
-                        <option value="Parking Firule">Parking Firule</option>
-                    </select>
-                </div>
-                <div class="sm:col-span-2">
-                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-                    <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
-                </div>
-                <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
-            </form>
-        </div>
+      <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+        <h2
+          class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white"
+        >
+          Contact Us
+        </h2>
+        <p
+          class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"
+        >
+          Have a question about parking availability? Need information about our
+          rates or locations? Interested in our monthly parking plans? Get in
+          touch with us.
+        </p>
+        <form action="#" class="space-y-8">
+          <div>
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >Your email</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              placeholder="your@email.com"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="subject"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >Subject</label
+            >
+            <input
+              type="text"
+              id="subject"
+              class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              placeholder="Let us know how we can help you"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="subject"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >Parking location</label
+            >
+            <select
+              type="text"
+              id="parkingLocation"
+              class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              required
+            >
+              <option value="Old City Parking">Old City Parking</option>
+              <option value="Parking Firule">Parking Firule</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <label
+              for="message"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+              >Your message</label
+            >
+            <textarea
+              id="message"
+              rows="6"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              placeholder="Leave a comment..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-purple-600 sm:w-fit hover:bg-purple-700 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+          >
+            Send message
+          </button>
+        </form>
+      </div>
     </section>
     <!-- End block -->
     <footer class="bg-white dark:bg-gray-800">
-        <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
-            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
-            <div class="text-center">
-                <span class="block text-sm text-center text-gray-500 dark:text-gray-400">© <span id="year">2024</span> Parking-Split.  All Rights Reserved.</a>
-                </span>
-            </div>
+      <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <div class="text-center">
+          <span
+            class="block text-sm text-center text-gray-500 dark:text-gray-400"
+            >© <span id="year">2024</span> Parking-Split. All Rights Reserved.
+          </span>
         </div>
+      </div>
     </footer>
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
-</body>
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("mobile-menu-2");
+          var menuIcon = document.getElementById("menu-icon");
+          var closeIcon = document.getElementById("close-icon");
+
+          menu.classList.toggle("hidden");
+          menuIcon.classList.toggle("hidden");
+          closeIcon.classList.toggle("hidden");
+        });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("JavaScript is loaded and running.");
+        var homeLink = document.getElementById("home-link");
+        var oldCityParkingLink = document.getElementById("oldCityParking-link");
+        var parkingFiruleLink = document.getElementById("parkingFirule-link");
+        var contactLink = document.getElementById("contact-link");
+
+        var links = [
+          homeLink,
+          oldCityParkingLink,
+          parkingFiruleLink,
+          contactLink,
+        ];
+
+        function toggleLinkColor(activeLink) {
+          links.forEach(function (link) {
+            if (link === activeLink) {
+              link.classList.add("text-purple-700");
+              link.classList.remove("text-gray-700");
+            } else {
+              link.classList.remove("text-purple-700");
+              link.classList.add("text-gray-700");
+            }
+          });
+        }
+
+        links.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            toggleLinkColor(link);
+          });
+        });
+      });
+    </script>
+  </body>
 </html>

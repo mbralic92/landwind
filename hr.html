@@ -7,10 +7,10 @@
     <title>Parking Split</title>
 
     <!-- Meta SEO -->
-    <meta name="title" content="Split parking" />
+    <meta name="title" content="Parking-Split" />
     <meta
       name="description"
-      content="Get started with a free and open-source landing page built with Tailwind CSS and the Flowbite component library."
+      content="Discover convenient and affordable parking solutions in the city center and beyond. Our prime locations offer 24/7 access, enhanced security, and multiple payment options, including 24/7 Self-Service Payment Kiosk. Whether you need hourly parking in the heart of the city or all-day parking just outside the center, we have the perfect spot for you. Enjoy peace of mind with our professionally managed facilities and competitive rates. Visit us today for the best parking experience in town."
     />
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -34,7 +34,7 @@
             <img src="./images/logo.svg" class="h-6 mr-3 sm:h-9" alt=" Logo" />
             <span
               class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-              >Split Parking</span
+              >Parking-Split</span
             >
           </a>
           <div class="flex items-center lg:order-2">
@@ -44,9 +44,11 @@
               class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="mobile-menu-2"
               aria-expanded="false"
+              id="menu-toggle"
             >
               <span class="sr-only">Open main menu</span>
               <svg
+                id="menu-icon"
                 class="w-6 h-6"
                 fill="currentColor"
                 viewBox="0 0 20 20"
@@ -59,6 +61,7 @@
                 ></path>
               </svg>
               <svg
+                id="close-icon"
                 class="hidden w-6 h-6"
                 fill="currentColor"
                 viewBox="0 0 20 20"
@@ -77,19 +80,21 @@
             id="mobile-menu-2"
           >
             <ul
-              class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
+              class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 items-center"
             >
               <li>
                 <a
-                  href="#index"
+                  href="#"
+                  id="home-link"
                   class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
                   aria-current="page"
-                  >Home</a
+                  >Početna</a
                 >
               </li>
               <li>
                 <a
                   href="#oldCityParking"
+                  id="oldCityParking-link"
                   class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >Old City Parking</a
                 >
@@ -97,6 +102,7 @@
               <li>
                 <a
                   href="#parkingFirule"
+                  id="parkingFirule-link"
                   class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >Parking Firule</a
                 >
@@ -104,10 +110,26 @@
               <li>
                 <a
                   href="#contact"
+                  id="contact-link"
                   class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
                   >Contact Us</a
                 >
               </li>
+              <div class="flex gap-8">
+                <a href="index.html"
+                  ><img
+                    src="https://static.parastorage.com/services/linguist-flags/1.663.0/assets/flags/square/GBR.png"
+                    alt="English"
+                    class="w-10 h-5 object-cover"
+                /></a>
+
+                <a href="hr.html"
+                  ><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/1024px-Flag_of_Croatia.svg.png"
+                    alt="Croatian"
+                    class="w-10 h-5 object-cover"
+                /></a>
+              </div>
             </ul>
           </div>
         </div>
@@ -117,7 +139,7 @@
     <!-- Start block -->
     <section class="bg-white dark:bg-gray-900">
       <div
-        class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28"
+        class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto gap-8 lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28"
       >
         <div class="mr-auto place-self-center lg:col-span-5">
           <h1
@@ -148,10 +170,10 @@
             <a
               href="https://maps.app.goo.gl/poSuA2USXeJ9EYsM9"
               target="_blank"
-              class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+              class="inline-flex items-center justify-center w-full px-5 py-3 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
             >
               <svg
-                class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400"
+                class="w-4 h-4 mr-2"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -165,7 +187,7 @@
             <a
               href="https://maps.app.goo.gl/vYcLAegDZ4ZJyApb6"
               target="_blank"
-              class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              class="inline-flex items-center justify-center w-full px-5 py-3 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
             >
               <svg
                 class="w-4 h-4 mr-2"
@@ -192,9 +214,10 @@
     </section>
     <!-- End block -->
     <!-- Start block -->
-    <section class="bg-gray-50 dark:bg-gray-800" id="oldCityParking">
+    <section class="bg-gray-50 dark:bg-gray-800">
       <div
         class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6"
+        id="oldCityParking"
       >
         <!-- Row -->
         <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
@@ -296,8 +319,8 @@
                 </svg>
                 <span
                   class="text-base font-medium leading-tight text-gray-900 dark:text-white"
-                  >Multiple Payment Methods: Electronic and card payments
-                  accepted on-site-</span
+                  >Convenient Payment Methods: 24/7 self-service payment
+                  kiosk</span
                 >
               </li>
             </ul>
@@ -315,10 +338,8 @@
           </div>
         </div>
         <!-- Row -->
-        <div
-          class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16"
-          id="parkingFirule"
-        >
+        <br id="parkingFirule" />
+        <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
           <div class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.960035077154!2d16.459078176548736!3d43.50316926212096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13355e1fc949fb5f%3A0x8469b4d49ec00d38!2sPut%20Iza%20Nove%20Bolnice%2010%2C%2021000%2C%20Split!5e0!3m2!1shr!2shr!4v1720421827316!5m2!1shr!2shr"
@@ -424,8 +445,7 @@
                 </svg>
                 <span
                   class="text-base font-medium leading-tight text-gray-900 dark:text-white"
-                  >Flexible Payments: Accepts multiple forms of payment,
-                  including credit cards on-site</span
+                  >Flexible Payments: 24/7 Self-Service Payment Kiosk</span
                 >
               </li>
               <li class="flex space-x-3">
@@ -466,10 +486,10 @@
           <p
             class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400"
           >
-            Our facilities include on-site credit card processing for quick and
-            secure transactions, ensuring a hassle-free parking experience. We
-            tailor our pricing to fit your needs, providing both short-term and
-            long-term parking solutions.
+            Our facilities include on-site 24/7 self-service payment kiosk for
+            quick and secure transactions, ensuring a hassle-free parking
+            experience. We tailor our pricing to fit your needs, providing both
+            short-term and long-term parking solutions.
           </p>
         </div>
         <div
@@ -503,7 +523,7 @@
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Pay with credit card</span>
+                <span>24/7 Self-Service Payment Kiosk</span>
               </li>
               <li class="flex items-center space-x-3">
                 <!-- Icon -->
@@ -604,7 +624,7 @@
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <span>Accepts credit card payments</span>
+                <span>24/7 Self-Service Payment Kiosk</span>
               </li>
               <li class="flex items-center space-x-3">
                 <!-- Icon -->
@@ -808,7 +828,7 @@
           </div>
           <button
             type="submit"
-            class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-purple-600 sm:w-fit hover:bg-purple-700 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
           >
             Send message
           </button>
@@ -824,11 +844,57 @@
         <div class="text-center">
           <span
             class="block text-sm text-center text-gray-500 dark:text-gray-400"
-            >© <span id="year">2024</span> Parking Split. All Rights Reserved.
+            >© <span id="year">2024</span> Parking-Split. All Rights Reserved.
           </span>
         </div>
       </div>
     </footer>
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("mobile-menu-2");
+          var menuIcon = document.getElementById("menu-icon");
+          var closeIcon = document.getElementById("close-icon");
+
+          menu.classList.toggle("hidden");
+          menuIcon.classList.toggle("hidden");
+          closeIcon.classList.toggle("hidden");
+        });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var homeLink = document.getElementById("home-link");
+        var oldCityParkingLink = document.getElementById("oldCityParking-link");
+        var parkingFiruleLink = document.getElementById("parkingFirule-link");
+        var contactLink = document.getElementById("contact-link");
+
+        var links = [
+          homeLink,
+          oldCityParkingLink,
+          parkingFiruleLink,
+          contactLink,
+        ];
+
+        function toggleLinkColor(activeLink) {
+          links.forEach(function (link) {
+            if (link === activeLink) {
+              link.classList.add("text-purple-700");
+              link.classList.remove("text-gray-700");
+            } else {
+              link.classList.remove("text-purple-700");
+              link.classList.add("text-gray-700");
+            }
+          });
+        }
+
+        links.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            toggleLinkColor(link);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
